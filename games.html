@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Games | Moonlight Studios</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Images/logo.png">    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo"><a href="index.html"><img src="Images/logo.png" alt="Moonlight Studios crescent moon logo" class="nav-logo"><span>MOONLIGHT STUDIOS</span></a></div><button class="nav-toggle" aria-label="Toggle navigation menu" onclick="document.querySelector('.navbar nav').classList.toggle('nav-open'); this.classList.toggle('active');"><span></span><span></span><span></span></button><nav>
+            <a href="index.html">Home</a>
+            <a href="games.html">Games</a>
+            <a href="blog.html">Devlogs</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="contact-embed-section">
+        
+        <section class="contact-header">
+            <h1>Our Games</h1>
+            <p>Explore our growing collection of games, each built with creativity, care, and a passion for fun gameplay.</p>
+        </section>
+
+        <section class="games-section">
+            <div class="games-grid">
+                
+                <div class="game-card">
+                    <a href="game-wizardsbane.html" class="game-card-link">
+                        <div class="game-thumb">
+                            <img src="Images/Wizardsbane/wizardsbane logo.png" alt="Wizardsbane Gameplay Thumbnail" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span class="placeholder-text is-hidden">Wizardsbane</span>
+                        </div>
+                    </a>
+                    <div class="game-info">
+                        <h3><a href="game-wizardsbane.html">Wizardsbane</a></h3>
+                        <span class="game-status status-remake">Remake In Progress</span>
+                        <p>A fast-paced action adventure currently being rebuilt from the ground up with improved gameplay, smoother mechanics, and a fresh new look.</p>
+                        <a href="game-wizardsbane.html" class="btn-card">View Game Page &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <a href="game-superpetfighter.html" class="game-card-link">
+                        <div class="game-thumb">
+                            <img src="Images/Super Pet Fighter/superpetfighter logo.gif" alt="Super Pet Fighter Thumbnail" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span class="placeholder-text is-hidden">Super Pet Fighter</span>
+                        </div>
+                    </a>
+                    <div class="game-info">
+                        <h3><a href="game-superpetfighter.html">Super Pet Fighter</a></h3>
+                        <span class="game-status status-released">Shipped</span>
+                        <p>Explore, train, and duel! Choose your companion and battle over 15 rival pets to become the ultimate champion in Super Pet Fighter: Re-hamstered Edition—available now!</p>
+                        <a href="game-superpetfighter.html" class="btn-card">View Game Page &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <a href="game-clonescape.html" class="game-card-link">
+                        <div class="game-thumb">
+                            <img src="Images/Clonescape/clonescape logo.png" alt="Clonescape Thumbnail" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span class="placeholder-text is-hidden">Clonescape</span>
+                        </div>
+                    </a>
+                    <div class="game-info">
+                        <h3><a href="game-clonescape.html">Clonescape</a></h3>
+                        <span class="game-status status-released">Shipped</span>
+                        <p>Awaken as a clone in a high-tech facility and test your wits against deadly traps, intricate switches, and precision platforming challenges to escape.</p>
+                        <a href="game-clonescape.html" class="btn-card">View Game Page &rarr;</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Moonlight Studios. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="contact.html">Contact Us</a> | 
+            <a href="privacy_policy.html">Privacy Policy</a> | 
+            <a href="terms_of_service.html">Terms of Service</a>
+        </div>
+    </footer>
+
+</body>
+</html>

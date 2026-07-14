@@ -3,73 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Custom styling to ensure good readability -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f7f9fb;
-        }
-        .policy-container {
-            max-width: 900px;
-        }
-        h1, h2, h3 {
-            font-weight: 700;
-        }
-        h1 { color: #1f2937; }
-        h2 { color: #374151; }
-        h3 { color: #4b5563; }
-        .content p, .content li {
-            color: #6b7280;
-            line-height: 1.75;
-        }
-        .content ul {
-            list-style-type: disc;
-            margin-left: 1.5rem;
-            padding-left: 0.5rem;
-        }
-    </style>
+    <title>Privacy Policy | Moonlight Studios</title>
+    <link rel="icon" type="image/png" href="Images/logo.png">    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- External and Fallback Embedded Styles -->
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <div class="policy-container mx-auto p-4 sm:p-8 lg:p-12 bg-white shadow-xl rounded-xl mt-8 mb-8">
-        <header class="pb-6 border-b border-gray-200">
-            <h1 class="text-3xl sm:text-4xl tracking-tight mb-2">Privacy Policy</h1>
-            <p class="text-sm font-medium text-gray-500">Last Updated: November 30, 2025</p>
-        </header>
 
-        <div class="content pt-6 space-y-6">
-            <p>
-                <strong>Moonlight Studios website</strong> ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains what information we collect, how we use it, and your rights regarding that information.
-            </p>
+    <!-- Header Navigation -->
 
-            <h2 class="text-2xl pt-4" id="info-collected">1. Information We Collect</h2>
-            <p>
-                We collect several types of information for various purposes to provide and improve our Service to you.
-            </p>
+    <header class="navbar">
+        <div class="logo"><a href="index.html"><img src="Images/logo.png" alt="Moonlight Studios crescent moon logo" class="nav-logo"><span>MOONLIGHT STUDIOS</span></a></div><button class="nav-toggle" aria-label="Toggle navigation menu" onclick="document.querySelector('.navbar nav').classList.toggle('nav-open'); this.classList.toggle('active');"><span></span><span></span><span></span></button><nav>
+            <a href="index.html">Home</a>
+            <a href="games.html">Games</a>
+            <a href="blog.html">Devlogs</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <!-- Policy Main Content -->
+    <main class="policy-container">
+        <div class="policy-header">
+            <h1>Privacy Policy</h1>
+            <span class="last-updated">Last Updated: July 15, 2025</span>
+        </div>
 
-            <h3 class="text-xl" id="personal-data">A. Personal Data</h3>
-            <p>
-                While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you ("Personal Data"). This may include, but is not limited to:
-            </p>
-            <ul class="list-disc ml-6 space-y-1">
+        <article class="policy-card">
+            <p>Moonlight Studios website ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains what information we collect, how we use it, and your rights regarding that information.</p>
+
+            <h2>1. Information We Collect</h2>
+            <p>We collect several types of information for various purposes to provide and improve our Service to you.</p>
+            
+            <h3>A. Personal Data</h3>
+            <p>While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you ("Personal Data"). This may include, but is not limited to:</p>
+            <ul>
                 <li>Email address</li>
                 <li>Username (if applicable)</li>
                 <li>Any content you voluntarily submit (e.g., chat messages, uploaded files)</li>
             </ul>
 
-            <h3 class="text-xl" id="usage-data">B. Usage Data</h3>
-            <p>
-                We may also collect information about how the Service is accessed and used ("Usage Data"). This Usage Data may include information such as your computer's Internet Protocol address (e.g., IP address), browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages, and other diagnostic data.
-            </p>
+            <h3>B. Usage Data</h3>
+            <p>We may also collect information about how the Service is accessed and used ("Usage Data"). This Usage Data may include information such as your computer's Internet Protocol address (e.g., IP address), browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages, and other diagnostic data.</p>
 
-            <h2 class="text-2xl pt-4" id="use-of-data">2. Use of Data</h2>
-            <p>
-                <strong>Moonlight Studios website</strong> uses the collected data for various purposes:
-            </p>
-            <ul class="list-disc ml-6 space-y-1">
+            <h2>2. Use of Data</h2>
+            <p>Moonlight Studios website uses the collected data for various purposes:</p>
+            <ul>
                 <li>To provide and maintain the Service.</li>
                 <li>To notify you about changes to our Service.</li>
                 <li>To allow you to participate in interactive features of our Service when you choose to do so.</li>
@@ -78,46 +62,45 @@
                 <li>To detect, prevent, and address technical issues.</li>
             </ul>
 
-            <h2 class="text-2xl pt-4" id="disclosure">3. Disclosure of Data</h2>
-            <p>
-                We will not sell your Personal Data. We may disclose your Personal Data in the good faith belief that such action is necessary to:
-            </p>
-            <ul class="list-disc ml-6 space-y-1">
+            <h2>3. Disclosure of Data</h2>
+            <p>We will not sell your Personal Data. We may disclose your Personal Data in the good faith belief that such action is necessary to:</p>
+            <ul>
                 <li>Comply with a legal obligation.</li>
-                <li>Protect and defend the rights or property of <strong>Moonlight Studios</strong>.</li>
+                <li>Protect and defend the rights or property of Moonlight Studios.</li>
                 <li>Prevent or investigate possible wrongdoing in connection with the Service.</li>
                 <li>Protect the personal safety of users of the Service or the public.</li>
                 <li>Protect against legal liability.</li>
             </ul>
 
-            <h2 class="text-2xl pt-4" id="security">4. Security of Data</h2>
-            <p>
-                The security of your data is important to us, but remember that no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.
-            </p>
+            <h2>4. Security of Data</h2>
+            <p>The security of your data is important to us, but remember that no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.</p>
 
-            <h2 class="text-2xl pt-4" id="children">5. Children's Privacy</h2>
-            <p>
-                Our Service is not directed to anyone under the age of 13 ("Children"). We do not knowingly collect personally identifiable information from anyone under the age of 13. If you are a parent or guardian and you are aware that your Children have provided us with Personal Data, please contact us.
-            </p>
+            <h2>5. Children's Privacy</h2>
+            <p>Our Service is not directed to anyone under the age of 13 ("Children"). We do not knowingly collect personally identifiable information from anyone under the age of 13. If you are a parent or guardian and you are aware that your Children have provided us with Personal Data, please contact us.</p>
 
-            <h2 class="text-2xl pt-4" id="rights">6. Your Data Protection Rights</h2>
-            <p>
-                You have the right to request access to, correction of, and deletion of your Personal Data. Please contact us using the details below to exercise these rights.
-            </p>
+            <h2>6. Your Data Protection Rights</h2>
+            <p>You have the right to request access to, correction of, and deletion of your Personal Data. Please contact us using the details below to exercise these rights.</p>
 
-            <h2 class="text-2xl pt-4" id="changes">7. Changes to This Privacy Policy</h2>
-            <p>
-                We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.
-            </p>
+            <h2>7. Changes to This Privacy Policy</h2>
+            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
 
-            <h2 class="text-2xl pt-4" id="contact">8. Contact Us</h2>
-            <p>
-                If you have any questions about this Privacy Policy, please contact us:
-            </p>
-            <ul class="list-disc ml-6 space-y-1">
-                <li>By email: <strong>moonlight.studio2510@gmail.com</strong></li>
+            <h2>8. Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us:</p>
+            <ul>
+                <li>By email: <a href="mailto:moonlight.studio2510@gmail.com">moonlight.studio2510@gmail.com</a></li>
             </ul>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Moonlight Studios. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="contact.html">Contact Us</a> | 
+            <a href="privacy_policy.html" class="active">Privacy Policy</a> | 
+            <a href="terms_of_service.html">Terms of Service</a>
         </div>
-    </div>
+    </footer>
+
 </body>
 </html>

@@ -3,329 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moonlight Studios</title>
-    <link rel="icon" href="Icon.png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    <script src="https://kit.fontawesome.com/176086dfe1.js" crossorigin="anonymous"></script>  
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(180deg, #0f172a 0%, #020617 100%);
-            color: #e2e8f0;
-            min-height: 100vh;
-        }
-
-        .cta-button {
-            transition: all 0.3s ease;
-            box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 25px rgba(139, 92, 246, 0.7);
-        }
-
-        .icon-celestial {
-            color: #8b5cf6;
-        }
-
-        #site-header, main {
-            position: relative;
-            z-index: 10;
-        }
-    </style>
+    <title>Moonlight Studios | Independent Game Development</title>
+    <link rel="icon" type="image/png" href="Images/logo.png">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="antialiased">
+<body>
 
-    <!-- Header -->
-    <header id="site-header" class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 flex justify-between items-center bg-transparent relative z-10">
-        <div class="flex items-center space-x-2">
-            <img src="Icon-removebg-preview.png" alt="" width="64" style="margin-right: 25px;">
-            <h1 class="text-2xl font-bold text-white tracking-wider">Moonlight Studios</h1>
-        </div>
-        <nav class="hidden md:flex space-x-8 text-sm font-medium">
-            <a href="#projects" class="text-gray-300 hover:text-indigo-400 transition duration-150">Projects</a>
-            <a href="#devlogs" class="text-gray-300 hover:text-indigo-400 transition duration-150">Devlogs</a>
-            <a href="#about" class="text-gray-300 hover:text-indigo-400 transition duration-150">About Us</a>
-            <a href="#careers" class="text-gray-300 hover:text-indigo-400 transition duration-150">Careers</a>
-            <a href="#contact" class="text-gray-300 hover:text-indigo-400 transition duration-150">Contact</a>
+    <header class="navbar">
+        <div class="logo"><a href="index.html"><img src="Images/logo.png" alt="Moonlight Studios crescent moon logo" class="nav-logo"><span>MOONLIGHT STUDIOS</span></a></div><button class="nav-toggle" aria-label="Toggle navigation menu" onclick="document.querySelector('.navbar nav').classList.toggle('nav-open'); this.classList.toggle('active');"><span></span><span></span><span></span></button><nav>
+            <a href="index.html">Home</a>
+            <a href="games.html">Games</a>
+            <a href="blog.html">Devlogs</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
         </nav>
-
-        <!-- Mobile Menu Button -->
-        <button id="mobile-menu-toggle" class="md:hidden text-gray-300 hover:text-indigo-400 transition duration-150">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </button>
     </header>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed inset-0 bg-black/90 z-50 hidden">
-        <div id="mobile-menu-panel" class="absolute top-0 right-0 w-64 h-full bg-gray-900 shadow-xl border-l border-indigo-800 p-6 transform translate-x-full transition-all duration-300">
-            <h2 class="text-xl font-bold text-white mb-6">Menu</h2>
-            <nav class="flex flex-col space-y-5 text-lg font-medium">
-                <a href="#projects" class="text-gray-300 hover:text-indigo-400 transition">Projects</a>
-                <a href="#devlogs" class="text-gray-300 hover:text-indigo-400 transition">Devlogs</a>
-                <a href="#about" class="text-gray-300 hover:text-indigo-400 transition">About Us</a>
-                <a href="#careers" class="text-gray-300 hover:text-indigo-400 transition">Careers</a>
-                <a href="#contact" class="text-gray-300 hover:text-indigo-400 transition">Contact</a>
-            </nav>
+    <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-content">
+            <span class="hero-tagline">Games Made with Passion</span>
+            <h1>Thoughtfully crafted worlds and gameplay that feels great.</h1>
+            <p>We're an indie game studio making memorable experiences, one game at a time.</p>
+            <div class="hero-buttons">
+                <a href="#games" class="btn-primary">Explore Our Games</a>
+                <a href="blog.html" class="btn-secondary">Read Devlogs</a>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Main Content -->
-    <main class="container mx-auto px-4 sm:px-6 lg:px-8">
-
-        <!-- Hero Section -->
-        <section class="py-24 text-center relative overflow-hidden">
-            <div class="relative z-10">
-                <h2 class="text-5xl sm:text-7xl font-extrabold text-white mb-6 leading-tight">
-                    <span class="block">Moonlight Studios</span>
-                </h2>
-                <p class="text-xl sm:text-2xl text-indigo-200 mb-10 max-w-3xl mx-auto">
-                    Handcrafted Pixel Worlds.
-                </p>
-                <a href="#projects" class="inline-block px-10 py-4 text-lg font-semibold text-white bg-indigo-600 rounded-full hover:bg-indigo-700 cta-button">
-                    Explore Our Games
-                </a>
-            </div>
-            <div class="absolute inset-0 flex justify-center items-center pointer-events-none">
-                <div class="w-[40rem] h-60 sm:w-[50rem] sm:h-60 bg-indigo-700 rounded-full opacity-35 blur-2xl"></div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="pt-16 pb-24">
-            <h3 class="text-4xl font-bold text-center text-indigo-400 mb-12">Featured Project</h3>
-            <div class="bg-gray-800 p-6 md:p-12 rounded-xl shadow-2xl flex flex-col lg:flex-row gap-8 items-center border border-indigo-900/50">
-                <div class="w-full lg:w-1/2 rounded-lg overflow-hidden shadow-lg transform hover:scale-[1.01] transition duration-300">
-                    <img src="title.gif" 
-                         alt="Concept art for Lunar Echoes, featuring a shadowy figure under a huge moon." 
-                         class="w-full h-auto object-cover" 
-                         onerror="this.src='https://placehold.co/800x450/1e293b/a5b4fc?text=Loading+Failed';" width="512">
-                </div>
-                <div class="w-full lg:w-1/2">
-                    <span class="text-sm font-medium text-indigo-400 uppercase tracking-widest mb-2 block">Available Now.</span>
-                    <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white">Wizardsbane</h2>
-                    <p class="text-gray-300 mb-6 text-lg">
-                        Wizardsbane is a 2D pixel art metroidvania where you play as a knight navigating a cursed castle. Utilize swift dashes, wall climbs, and double jumps to carve your path through forgotten halls, toxic sewers, and more.
-                    </p>
-                    <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-indigo-300 mb-8">
-                        <li class="flex items-center space-x-2">
-                            <i data-lucide="gamepad" class="w-4 h-4 icon-celestial"></i> <span>Genre: Metroidvania</span>
-                        </li>
-                        <li class="flex items-center space-x-2">
-                            <i data-lucide="monitor" class="w-4 h-4 icon-celestial"></i> <span>Platform: PC</span>
-                        </li>
-                        <li class="flex items-center space-x-2">
-                            <i data-lucide="users" class="w-4 h-4 icon-celestial"></i> <span>Mode: Single-player</span>
-                        </li>
-                    </ul>
-                    <a href="https://moonlight-studios-1.itch.io/wizardsbane" class="inline-flex items-center px-8 py-3 font-semibold text-white bg-violet-600 rounded-full hover:bg-violet-700 cta-button">
-                        View Game Page
-                        <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Devlogs Section -->
-        <section id="devlogs" class="pt-16 pb-24">
-            <h3 class="text-4xl font-bold text-center text-indigo-400 mb-12">Devlogs & Studio Updates</h3>
-            <div id="devlog-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-800 p-6 rounded-xl shadow-xl border-t-2 border-violet-500 hover:scale-[1.02] transition duration-300">
-                    <p class="text-sm text-gray-500 mb-2">Devember 3, 2025</p>
-                    <h4 class="text-xl font-semibold text-white mb-3">Wizardsbane - final devlog before launch</h4>
-                    <p class="text-gray-400 mb-4">Wizardsbane launches on December 7th, featuring smarter enemies, a bigger map, improved bosses, new NPCs, a revamped shop, and all major bugs fixed.</p>
-                    <a href="https://moonlight-studios-1.itch.io/wizardsbane/devlog/1131987/devlog-final-update-before-launch" class="text-indigo-400 hover:text-indigo-300 text-sm font-medium flex items-center">
-                        Read More 
-                        <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i>
-                    </a>
-                </div>
-                <div class="bg-gray-800 p-6 rounded-xl shadow-xl border-t-2 border-violet-500 hover:scale-[1.02] transition duration-300">
-                    <p class="text-sm text-gray-500 mb-2">May 26, 2025</p>
-                    <h4 class="text-xl font-semibold text-white mb-3">Introducing Wizardsbane!</h4>
-                    <p class="text-gray-400 mb-4">We've nailed core player movement (dashing, double jump, wall jump) and implemented simple, satisfying combat with basic enemy AI.</p>
-                    <a href="https://moonlight-studios-1.itch.io/wizardsbane/devlog/953153/wizardsbane-devlog-1" class="text-indigo-400 hover:text-indigo-300 text-sm font-medium flex items-center">
-                        Read More 
-                        <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i>
-                    </a>
-                </div>
-                <div class="bg-gray-800 p-6 rounded-xl shadow-xl border-t-2 border-violet-500 hover:scale-[1.02] transition duration-300">
-                    <p class="text-sm text-gray-500 mb-2">August 23, 2023</p>
-                    <h4 class="text-xl font-semibold text-white mb-3">Super Pet Fighter Update 1.0.1</h4>
-                    <p class="text-gray-400 mb-4">Bug fixes and new content!</p>
-                    <a href="https://moonlight-studios-1.itch.io/super-pet-fighter-re-hamstered-edition/devlog/578072/update-101" class="text-indigo-400 hover:text-indigo-300 text-sm font-medium flex items-center">
-                        Read More 
-                        <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="text-center mt-12">
-                <button id="view-more-devlogs" class="inline-block px-8 py-3 font-semibold text-indigo-400 border border-indigo-400 rounded-full hover:bg-indigo-900 transition duration-300">
-                    View All Devlogs
-                </button>
-            </div>
-        </section>
-
-        <!-- About Us Section -->
-        <section id="about" class="pt-16 pb-24 text-center">
-            <h3 class="text-4xl font-bold text-white mb-6">About Us</h3>
-            <p class="text-xl text-gray-400 mb-12 max-w-4xl mx-auto">
-                Moonlight Studios creates focused, story-first games. We blend challenging mechanics with atmospheric worlds.
-            </p>
+    <section id="games" class="games-section">
+        <h2 class="section-title">Our Projects</h2>
+        <div class="games-grid">
             
-            <div class="grid md:grid-cols-3 gap-8 text-left">
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border-t-4 border-indigo-600">
-                    <i data-lucide="book-open-text" class="w-8 h-8 mb-4 icon-celestial"></i>
-                    <h5 class="text-xl font-semibold text-white mb-2">Deep Narrative</h5>
-                    <p class="text-gray-400">Crafting compelling stories that linger long after the credits roll.</p>
-                </div>
-                
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border-t-4 border-indigo-600">
-                    <i data-lucide="palette" class="w-8 h-8 mb-4 icon-celestial"></i>
-                    <h5 class="text-xl font-semibold text-white mb-2">Atmospheric Design</h5>
-                    <p class="text-gray-400">We utilize pixel art and visual design to craft deeply atmospheric and unforgettable worlds.</p>
-                </div>
-
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border-t-4 border-indigo-600">
-                    <i data-lucide="swords" class="w-8 h-8 mb-4 icon-celestial"></i>
-                    <h5 class="text-xl font-semibold text-white mb-2">Refined Gameplay</h5>
-                    <p class="text-gray-400">Prioritizing polished mechanics and responsive controls for a satisfying experience.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Careers Section -->
-        <section id="careers" class="pt-16 pb-24 text-center bg-gray-900 rounded-xl mb-16 border border-gray-800/50">
-            <h3 class="text-4xl font-bold text-indigo-400 mb-6">Join Our Crew</h3>
-            <p class="text-xl text-gray-400 mb-10 max-w-4xl mx-auto">
-                We're always searching for passionate souls who want to build narrative-rich, beautiful and fun games.
-            </p>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
-                <div class="bg-gray-800 p-5 rounded-lg border border-indigo-700/50">
-                    <i data-lucide="code-square" class="w-6 h-6 mb-2 mx-auto icon-celestial"></i>
-                    <h4 class="font-semibold text-white">Programmers</h4>
-                </div>
-                <div class="bg-gray-800 p-5 rounded-lg border border-indigo-700/50">
-                    <i data-lucide="brush" class="w-6 h-6 mb-2 mx-auto icon-celestial"></i>
-                    <h4 class="font-semibold text-white">Artists</h4>
-                </div>
-                <div class="bg-gray-800 p-5 rounded-lg border border-indigo-700/50">
-                    <i data-lucide="pen-tool" class="w-6 h-6 mb-2 mx-auto icon-celestial"></i>
-                    <h4 class="font-semibold text-white">Narrative Designer</h4>
-                </div>
-                <div class="bg-gray-800 p-5 rounded-lg border border-indigo-700/50">
-                    <i data-lucide="music-4" class="w-6 h-6 mb-2 mx-auto icon-celestial"></i>
-                    <h4 class="font-semibold text-white">Sound & Music Designers</h4>
-                </div>
-            </div>
-            <a href="#contact" class="mt-8 inline-block px-8 py-3 font-semibold text-white bg-indigo-600 rounded-full hover:bg-indigo-700 cta-button">
-                See All Open Roles
-            </a>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="pt-16 pb-24 text-center">
-            <h3 class="text-4xl font-bold text-white mb-6">Contact the Studio</h3>
-            <p class="text-xl text-gray-400 mb-10 max-w-4xl mx-auto">
-                Have a question, partnership proposal, or just want to say hello? Reach out to us.
-            </p>
-            
-            <div class="max-w-xl mx-auto bg-gray-800 p-8 rounded-xl shadow-2xl border border-indigo-900/50">
-                <form id="contact-form" action="https://formspree.io/f/mvgegypo" method="POST">
-                    <input type="hidden" name="_replyto_studio" value="moonlight.studio2510@gmail.com">
-
-                    <div class="mb-4">
-                        <label for="name" class="block text-left text-sm font-medium text-gray-300 mb-1">Name</label>
-                        <input type="text" id="name" name="name" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-white focus:ring-indigo-500 focus:border-indigo-500" required>
+            <!-- Wizardsbane Card -->
+            <div class="game-card">
+                <a href="game-wizardsbane.html" class="game-card-link">
+                    <div class="game-thumb">
+                        <img src="Images/Wizardsbane/wizardsbane logo.png" alt="Wizardsbane Gameplay Thumbnail" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="placeholder-text is-hidden">Wizardsbane</span>
                     </div>
-                    <div class="mb-4">
-                        <label for="email" class="block text-left text-sm font-medium text-gray-300 mb-1">Email</label>
-                        <input type="email" id="email" name="email" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-white focus:ring-indigo-500 focus:border-indigo-500" required>
-                    </div>
-                    <div class="mb-6">
-                        <label for="message" class="block text-left text-sm font-medium text-gray-300 mb-1">Message</label>
-                        <textarea id="message" name="message" rows="4" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-white focus:ring-indigo-500 focus:border-indigo-500" required></textarea>
-                    </div>
-                    <button type="submit" class="w-full px-6 py-3 font-semibold text-white bg-violet-600 rounded-full hover:bg-violet-700 cta-button">
-                        Send Message
-                    </button>
-                </form>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 border-t border-indigo-900/50 py-10">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="flex justify-center space-x-6 mb-6">
-                <a href="#" class="text-gray-400 hover:text-indigo-400 transition" aria-label="Join us on Discord"><i data-lucide="discord" class="w-6 h-6"></i></a>
-                <a href="https://moonlight-studios-1.itch.io/" class="text-gray-400 hover:text-indigo-400 transition" aria-label="Check our itch.io page">
-                    <i class="fa-brands fa-itch-io fa-lg"></i>
                 </a>
-                <a href="https://x.com/Moonlight2510_" class="text-gray-400 hover:text-indigo-400 transition" aria-label="Follow us on Twitter"><i data-lucide="twitter" class="w-6 h-6"></i></a>
-                <a href="https://www.youtube.com/@moonlightstudios2510/videos" class="text-gray-400 hover:text-indigo-400 transition" aria-label="Subscribe to our YouTube channel"><i data-lucide="youtube" class="w-6 h-6"></i></a>                
-                <a href="https://www.instagram.com/moonlight.studios2510/?next=%2F" class="text-gray-400 hover:text-indigo-400 transition" aria-label="Follow us on Instagram"><i data-lucide="instagram" class="w-6 h-6"></i></a>
-                <a href="#" class="text-gray-400 hover:text-indigo-400 transition" aria-label="Email us"><i class="fa-brands fa-discord"></i></i></a>   
+                <div class="game-info">
+                    <h3><a href="game-wizardsbane.html">Wizardsbane</a></h3>
+                    <span class="game-status status-remake">Remake In Progress</span>
+                    <p>A fast-paced action adventure currently being rebuilt from the ground up with improved gameplay, smoother mechanics, and a fresh new look.</p>
+                    <a href="game-wizardsbane.html" class="btn-card">View Game Page &rarr;</a>
+                </div>
             </div>
-            <p class="text-gray-500 text-sm">&copy; 2025 Moonlight Studios. All rights reserved.</p>
-            <div class="mt-2 text-xs text-gray-600">                 
-                <a href="#contact" class="hover:text-gray-400">Contact Us</a> | <a href="privacy_policy.html" class="hover:text-gray-400">Privacy Policy</a> | <a href="terms_of_service.html" class="hover:text-gray-400">Terms of Service</a>             
+
+            <!-- Super Pet Fighter Card -->
+            <div class="game-card">
+                <a href="game-superpetfighter.html" class="game-card-link">
+                    <div class="game-thumb">
+                        <img src="Images/Super Pet Fighter/superpetfighter logo.gif" alt="Super Pet Fighter Thumbnail" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="placeholder-text is-hidden">Super Pet Fighter</span>
+                    </div>
+                </a>
+                <div class="game-info">
+                    <h3><a href="game-superpetfighter.html">Super Pet Fighter</a></h3>
+                    <span class="game-status status-released">Shipped</span>
+                    <p>Explore, train, and duel! Choose your companion and battle over 15 rival pets to become the ultimate champion in Super Pet Fighter: Re-hamstered Edition—available now!</p>
+                    <a href="game-superpetfighter.html" class="btn-card">View Game Page &rarr;</a>
+                </div>
             </div>
+
+            <!-- Clonescape Card -->
+            <div class="game-card">
+                <a href="game-clonescape.html" class="game-card-link">
+                    <div class="game-thumb">
+                        <img src="Images/Clonescape/clonescape logo.png" alt="Clonescape Thumbnail" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="placeholder-text is-hidden">Clonescape</span>
+                    </div>
+                </a>
+                <div class="game-info">
+                    <h3><a href="game-clonescape.html">Clonescape</a></h3>
+                    <span class="game-status status-released">Shipped</span>
+                    <p>Awaken as a clone in a high-tech facility and test your wits against deadly traps, intricate switches, and precision platforming challenges to escape.</p>
+                    <a href="game-clonescape.html" class="btn-card">View Game Page &rarr;</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="about-teaser-section">
+        <div class="about-teaser-content">
+            <h2 class="section-title">About the Studio</h2>
+            <p>Moonlight Studios is a small independent game development studio driven by a passion for creating fun, memorable games. We love experimenting with new ideas, refining every detail, and building experiences that players can enjoy.</p>
+            <a href="about.html" class="btn-secondary">Learn More About Us</a>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="contact-card">
+            <form id="studio-contact-form">
+                <div class="form-group">
+                    <label for="user_name">Name</label>
+                    <input type="text" id="user_name" required placeholder="Your Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="user_email">Email</label>
+                    <input type="email" id="user_email" required placeholder="your@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="user_msg">Message</label>
+                    <textarea id="user_msg" rows="5" required placeholder="Write your message..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary form-btn">Send Message</button>
+            </form>
+            <div id="form-status"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Moonlight Studios. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="contact.html">Contact Us</a> | 
+            <a href="privacy_policy.html">Privacy Policy</a> | 
+            <a href="terms_of_service.html">Terms of Service</a>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script>
-        if (typeof lucide !== 'undefined' && lucide.createIcons) {
-            lucide.createIcons();
-        }
+        const contactForm = document.getElementById('studio-contact-form');
+        const formStatus = document.getElementById('form-status');
 
-        // Mobile menu toggle
-        const toggleBtn = document.getElementById("mobile-menu-toggle");
-        const menu = document.getElementById("mobile-menu");
-        const panel = document.getElementById("mobile-menu-panel");
-        let isOpen = false;
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            formStatus.style.color = '#4ee2ec';
+            formStatus.textContent = 'Sending...';
 
-        toggleBtn.addEventListener("click", () => {
-            isOpen = !isOpen;
-            if (isOpen) {
-                menu.classList.remove("hidden");
-                setTimeout(() => panel.classList.remove("translate-x-full"), 10);
-            } else {
-                panel.classList.add("translate-x-full");
-                setTimeout(() => menu.classList.add("hidden"), 300);
+            const payload = {
+                name: document.getElementById('user_name').value,
+                email: document.getElementById('user_email').value,
+                message: document.getElementById('user_msg').value,
+                _replyto_studio: 'moonlight.studio2510@gmail.com'
+            };
+
+            try {
+                const response = await fetch('https://formspree.io/f/mvgegypo', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    formStatus.style.color = '#4caf50';
+                    formStatus.textContent = 'Message sent successfully!';
+                    contactForm.reset();
+                } else {
+                    throw new Error('Server response failed');
+                }
+            } catch (err) {
+                formStatus.style.color = '#f44336';
+                formStatus.textContent = 'Error sending message. Try again later.';
             }
         });
-
-        menu.addEventListener("click", e => {
-            if (!panel.contains(e.target)) {
-                panel.classList.add("translate-x-full");
-                setTimeout(() => menu.classList.add("hidden"), 300);
-                isOpen = false;
-            }
-        });
-
-        // Devlogs show more
-        const viewMoreButton = document.getElementById('view-more-devlogs');
-        if (viewMoreButton) {
-            viewMoreButton.addEventListener('click', function() {
-                const hiddenDevlogs = document.querySelectorAll('.devlog-extra');
-                hiddenDevlogs.forEach(devlog => devlog.classList.remove('hidden'));
-                viewMoreButton.classList.add('hidden');
-            });
-        }
     </script>
-
 </body>
 </html>
-
-
-
-

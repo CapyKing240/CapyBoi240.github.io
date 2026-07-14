@@ -3,119 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Custom styling to ensure good readability -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f7f9fb;
-        }
-        .policy-container {
-            max-width: 900px;
-        }
-        h1, h2, h3 {
-            font-weight: 700;
-        }
-        h1 { color: #1f2937; }
-        h2 { color: #374151; }
-        h3 { color: #4b5563; }
-        .content p, .content li {
-            color: #6b7280;
-            line-height: 1.75;
-        }
-        .content ul {
-            list-style-type: disc;
-            margin-left: 1.5rem;
-            padding-left: 0.5rem;
-        }
-    </style>
+    <title>Terms of Service | Moonlight Studios</title>
+    <link rel="icon" type="image/png" href="Images/logo.png">   
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- External and Fallback Embedded Styles -->
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <div class="policy-container mx-auto p-4 sm:p-8 lg:p-12 bg-white shadow-xl rounded-xl mt-8 mb-8">
-        <header class="pb-6 border-b border-gray-200">
-            <h1 class="text-3xl sm:text-4xl tracking-tight mb-2">Terms of Service</h1>
-            <p class="text-sm font-medium text-gray-500">Last Updated: November 30, 2025</p>
-        </header>
 
-        <div class="content pt-6 space-y-6">
-            <p>
-                Welcome to <strong>Moonlight Studios website</strong> (the "Service"), operated by <strong>Moonlight Studios</strong> ("we," "our," or "us").
-            </p>
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="logo"><a href="index.html"><img src="Images/logo.png" alt="Moonlight Studios crescent moon logo" class="nav-logo"><span>MOONLIGHT STUDIOS</span></a></div><button class="nav-toggle" aria-label="Toggle navigation menu" onclick="document.querySelector('.navbar nav').classList.toggle('nav-open'); this.classList.toggle('active');"><span></span><span></span><span></span></button><nav>
+            <a href="index.html">Home</a>
+            <a href="games.html">Games</a>
+            <a href="blog.html">Devlogs</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    
+    <!-- Terms Main Content -->
+    <main class="policy-container">
+        <div class="policy-header">
+            <h1>Terms of Service</h1>
+            <span class="last-updated">Last Updated: July 15, 2025</span>
+        </div>
 
-            <h2 class="text-2xl pt-4" id="agreement">1. Agreement to Terms</h2>
-            <p>
-                By accessing or using our Service, you agree to be bound by these Terms of Service ("Terms") and our Privacy Policy. If you disagree with any part of the terms, then you may not access the Service.
-            </p>
+        <article class="policy-card">
+            <p>Welcome to Moonlight Studios website (the "Service"), operated by Moonlight Studios ("we," "our," or "us").</p>
 
-            <h2 class="text-2xl pt-4" id="changes">2. Changes to Terms</h2>
-            <p>
-                We reserve the right to modify or replace these Terms at any time. We will try to provide at least 30 days' notice before any new terms take effect. By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms.
-            </p>
+            <h2>1. Agreement to Terms</h2>
+            <p>By accessing or using our Service, you agree to be bound by these Terms of Service ("Terms") and our <a href="privacy_policy.html">Privacy Policy</a>. If you disagree with any part of the terms, then you may not access the Service.</p>
 
-            <h2 class="text-2xl pt-4" id="accessing">3. Accessing the Service</h2>
-            <p>
-                We grant you a personal, non-exclusive, non-transferable, revocable license to access and use the Service. You must be at least 13 years old to use the Service.
-            </p>
+            <h2>2. Changes to Terms</h2>
+            <p>We reserve the right to modify or replace these Terms at any time. We will try to provide at least 30 days' notice before any new terms take effect. By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms.</p>
 
-            <h2 class="text-2xl pt-4" id="accounts">4. User Accounts</h2>
-            <p>
-                If the Service requires you to create an account, you agree to:
-            </p>
-            <ul class="list-disc ml-6 space-y-1">
+            <h2>3. Accessing the Service</h2>
+            <p>We grant you a personal, non-exclusive, non-transferable, revocable license to access and use the Service. You must be at least 13 years old to use the Service.</p>
+
+            <h2>4. User Accounts</h2>
+            <p>If the Service requires you to create an account, you agree to:</p>
+            <ul>
                 <li>Provide accurate and complete information.</li>
                 <li>Maintain the security of your password and identification.</li>
                 <li>Accept all risks of unauthorized access to your account.</li>
                 <li>Notify us immediately upon becoming aware of any breach of security or unauthorized use of your account.</li>
             </ul>
 
-            <h2 class="text-2xl pt-4" id="conduct">5. User Conduct and Content</h2>
-            <p>
-                You are responsible for all content, including text, images, or other material ("Content") that you post, upload, link to, or otherwise make available via the Service.
-            </p>
-            <p>
-                You agree not to use the Service to:
-            </p>
-            <ul class="list-disc ml-6 space-y-1">
+            <h2>5. User Conduct and Content</h2>
+            <p>You are responsible for all content, including text, images, or other material ("Content") that you post, upload, link to, or otherwise make available via the Service.</p>
+            <p>You agree not to use the Service to:</p>
+            <ul>
                 <li>Post content that is unlawful, harmful, threatening, abusive, defamatory, or invasive of another's privacy.</li>
                 <li>Impersonate any person or entity.</li>
                 <li>Engage in any unsolicited or unauthorized advertising, solicitation, or promotional materials.</li>
                 <li>Violate any applicable local, state, national, or international law.</li>
             </ul>
 
-            <h2 class="text-2xl pt-4" id="ip">6. Intellectual Property</h2>
-            <p>
-                The Service and its original content (excluding Content provided by users), features, and functionality are and will remain the exclusive property of <strong>Moonlight Studios</strong> and its licensors. Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of <strong>Moonlight Studios</strong>.
-            </p>
-            <p>
-                Your Content remains yours, but by posting it, you grant us a worldwide, non-exclusive, royalty-free, transferable license to use, reproduce, modify, publicly perform, publicly display, distribute, and publish your Content in connection with the Service.
-            </p>
+            <h2>6. Intellectual Property</h2>
+            <p>The Service and its original content (excluding Content provided by users), features, and functionality are and will remain the exclusive property of Moonlight Studios and its licensors. Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of Moonlight Studios.</p>
+            <p>Your Content remains yours, but by posting it, you grant us a worldwide, non-exclusive, royalty-free, transferable license to use, reproduce, modify, publicly perform, publicly display, distribute, and publish your Content in connection with the Service.</p>
 
-            <h2 class="text-2xl pt-4" id="termination">7. Termination</h2>
-            <p>
-                We may terminate or suspend your account immediately, without prior notice or liability, for any reason whatsoever, including, without limitation, if you breach the Terms.
-            </p>
-            <p>
-                Upon termination, your right to use the Service will immediately cease.
-            </p>
+            <h2>7. Termination</h2>
+            <p>We may terminate or suspend your account immediately, without prior notice or liability, for any reason whatsoever, including, without limitation, if you breach the Terms.</p>
+            <p>Upon termination, your right to use the Service will immediately cease.</p>
 
-            <h2 class="text-2xl pt-4" id="disclaimer">8. Disclaimer of Warranties</h2>
-            <p>
-                Your use of the Service is at your sole risk. The Service is provided on an "AS IS" and "AS AVAILABLE" basis. The Service is provided without warranties of any kind, whether express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, non-infringement, or course of performance.
-            </p>
+            <h2>8. Disclaimer of Warranties</h2>
+            <p>Your use of the Service is at your sole risk. The Service is provided on an "AS IS" and "AS AVAILABLE" basis. The Service is provided without warranties of any kind, whether express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, non-infringement, or course of performance.</p>
 
-            <h2 class="text-2xl pt-4" id="governing-law">9. Governing Law</h2>
-            <p>
-                These Terms shall be governed and construed in accordance with the laws of <strong>Republic of Serbia</strong>, without regard to its conflict of law provisions.
-            </p>
+            <h2>9. Governing Law</h2>
+            <p>These Terms shall be governed and construed in accordance with the laws of Republic of Serbia, without regard to its conflict of law provisions.</p>
 
-            <h2 class="text-2xl pt-4" id="contact">10. Contact Information</h2>
-            <p>
-                If you have any questions about these Terms, please contact us at <strong>moonlight.studio2510@gmail.com</strong>.
-            </p>
+            <h2>10. Contact Information</h2>
+            <p>If you have any questions about these Terms, please contact us at <a href="mailto:moonlight.studio2510@gmail.com">moonlight.studio2510@gmail.com</a>.</p>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Moonlight Studios. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="contact.html">Contact Us</a> | 
+            <a href="privacy_policy.html">Privacy Policy</a> | 
+            <a href="terms_of_service.html">Terms of Service</a>
         </div>
-    </div>
+    </footer>
+
 </body>
 </html>
