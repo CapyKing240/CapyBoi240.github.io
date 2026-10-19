@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- When a server shows this page for a missing URL (any folder depth), links must start from the site root.
+       Opening the file directly from a folder still works, because the root is only forced over http(s). -->
+  <script>if (/^https?:$/.test(location.protocol) && !/\/404\.html$/.test(location.pathname)) document.write('<base href="/">');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex">
+  <title>Moonlight Studiost</title>
+  <meta name="description" content="This page doesn't exist. Head back to Moonlight Studios.">
+  <meta name="theme-color" content="#0a0e2a">
+  <link rel="icon" href="Images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="notfound">
+  <main id="app">
+    <section class="container nf">
+      <p class="nf-code" aria-hidden="true">404</p>
+      <h1>Page not found</h1>
+      <p class="nf-lead">The page you're looking for doesn't exist or has been moved.</p>
+      <div class="btn-row">
+        <a class="btn btn-moon" href="index.html">Back to home</a>
+        <a class="btn btn-line" href="games.html">Browse games</a>
+      </div>
+    </section>
+  </main>
+  <noscript><p style="padding:2rem;text-align:center">This site needs JavaScript turned on to show its games and devlogs.</p></noscript>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
