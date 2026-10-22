@@ -38,7 +38,7 @@ const GAMES = [
     status: "In progress",
     statusKey: "progress",
     hue: 262,
-    tagline: "The action adventure, rebuilt from the ground up.",
+    tagline: "The action metroidvania,",
     short: "A fast-paced action adventure being rebuilt with improved gameplay, smoother mechanics and a fresh look.",
     description: [
       "A fast-paced action adventure currently being rebuilt from the ground up with improved gameplay, smoother mechanics, and a fresh new look.",
@@ -58,6 +58,7 @@ const GAMES = [
     cover: "images/games/wizardsbane/cover.png",
     hero: "images/games/wizardsbane/hero.png",
     logo: "images/games/wizardsbane/logo.png",
+    showcase: "images/games/wizardsbane/showcase.png",
     screenshots: [
       "images/games/wizardsbane/shot1.png",
       "images/games/wizardsbane/shot2.png",
@@ -94,6 +95,7 @@ const GAMES = [
     cover: "images/games/clonescape/cover.png",
     hero: "images/games/clonescape/hero.png",
     logo: "images/games/clonescape/logo.png",
+    showcase: "images/games/clonescape/hero.png",
     screenshots: [
       "images/games/clonescape/shot1.png",
       "images/games/clonescape/shot2.png",
@@ -162,18 +164,18 @@ const DEVLOGS = [
     slug: "welcome-to-the-new-site",
     game: "general",
     date: "2026-10-18",
-    title: "Welcome to the new Moonlight Studios site",
-    excerpt: "A new home for our games, and a place to follow along while we build them.",
+    title: "Welcome to the New Moonlight Studios Site!",
+    excerpt: "Welcome to the new home of Moonlight Studios! We built this website to bring everything we make into one place our games, our progress, and the stories behind how we build them.",
     cover: "images/devlogs/new_website_look.png",
     body: [
       { type: "p", text: "Welcome! This is the new home of Moonlight Studios. Every game we make now has its own page, and every devlog lives here too." },
-      { type: "h", text: "What you'll find here" },
+      { type: "h", text: "Here is a quick tour of what you’ll find on the site:" },
       { type: "list", items: [
-        "A page for every game, with screenshots, videos and a link to its itch.io page",
-        "Devlogs you can filter by game, or by studio news",
-        "The devlogs for each game, collected at the bottom of its page"
+        "Every game now has its own page complete with screenshots, gameplay trailers, and direct links to download or play on itch.io.",
+        "Looking for updates on a specific project? You can now filter devlogs by individual games or check out studio wide announcements.",
+        "Scroll down to the bottom of any game's page to catch up on every devlog written for that project from day one."
       ]},
-      { type: "p", text: "Sample text: replace this with your own announcement." }
+      { type: "p", text: "We want this space to be an open journal of our journey as game developers. Have a look around, check out what we're working on, and don't hesitate to jump into the devlogs to share your thoughts and feedback. Thanks for being here and following along!" }
     ]
   },
   {

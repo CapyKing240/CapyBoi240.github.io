@@ -32,7 +32,7 @@
   const arr = (v) => (Array.isArray(v) ? v : v == null || v === "" ? [] : [v]);
   const DATA_SITE = Object.assign({ email: "", formEndpoint: "", replyTo: "" }, hasSite ? SITE : {});
   DATA_SITE.socials = DATA_SITE.socials || {};
-  const gameDefaults = { subtitle: "", status: "", statusKey: "upcoming", hue: 235, tagline: "", short: "", itch: "", cover: "", hero: "", logo: "" };
+  const gameDefaults = { subtitle: "", status: "", statusKey: "upcoming", hue: 235, tagline: "", short: "", itch: "", cover: "", hero: "", showcase: "", logo: "" };
   const DATA_GAMES = (hasGames ? arr(GAMES) : [])
     .filter((g, i) => { const ok = g && g.slug && g.title; if (!ok) problems.push(`GAMES entry #${i + 1} needs a slug and a title, so it was skipped.`); return ok; })
     .map((g) => Object.assign({}, gameDefaults, g, { description: arr(g.description), features: arr(g.features), facts: arr(g.facts), screenshots: arr(g.screenshots), videos: arr(g.videos) }));
@@ -391,7 +391,7 @@
     if (!el) return;
     el.innerHTML = `<div class="stage">${DATA_GAMES.map((g, i) => `
         <article class="slide${i ? "" : " on"}" aria-hidden="${i ? "true" : "false"}">
-          ${art(g.hero || g.cover, g.title, g.hue)}
+          ${art(g.showcase || g.hero || g.cover, g.title, g.hue)}
           <div class="slide-shade"></div>
           <div class="slide-copy">
             ${statusBadge(g)}
@@ -652,7 +652,7 @@
     const el = $("#about-stats");
     if (!el) return;
     const released = DATA_GAMES.filter((g) => g.statusKey === "released").length;
-    el.innerHTML = `<div><strong>${DATA_GAMES.length}</strong><span>games made</span></div><div><strong>${released}</strong><span>released</span></div><div><strong>${logs.length}</strong><span>devlogs written</span></div>`;
+    el.innerHTML = `<div><strong>${DATA_GAMES.length}</strong><span>games made</span></div><div><strong>${logs.length}</strong><span>devlogs written</span></div><div><strong>100%</strong><span>self-funded</span></div>`;
     const gl = $("#about-games");
     if (gl) gl.innerHTML = DATA_GAMES.map(posterCard).join("");
   }
