@@ -175,7 +175,8 @@ const DEVLOGS = [
         "Looking for updates on a specific project? You can now filter devlogs by individual games or check out studio wide announcements.",
         "Scroll down to the bottom of any game's page to catch up on every devlog written for that project from day one."
       ]},
-      { type: "p", text: "We want this space to be an open journal of our journey as game developers. Have a look around, check out what we're working on, and don't hesitate to jump into the devlogs to share your thoughts and feedback. Thanks for being here and following along!" }
+      { type: "p", text: "We want this space to be an open journal of our journey as game developers. Have a look around, check out what we're working on, and don't hesitate to jump into the devlogs to share your thoughts and feedback. Thanks for being here and following along!" },
+      { type: "p", text: "— The Moonlight Studios Team 🌙" }    
     ]
   },
   {
