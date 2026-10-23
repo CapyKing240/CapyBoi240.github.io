@@ -163,7 +163,7 @@ const DEVLOGS = [
   {
     slug: "welcome-to-the-new-site",
     game: "general",
-    date: "2026-10-22",
+    date: "2026-10-23",
     title: "Welcome to the New Moonlight Studios Site!",
     excerpt: "Welcome to the new home of Moonlight Studios! We built this website to bring everything we make into one place our games, our progress, and the stories behind how we build them.",
     cover: "images/devlogs/new_website_look.png",
@@ -181,7 +181,7 @@ const DEVLOGS = [
   {
     slug: "where-have-we-been",
     game: "general",
-    date: "2026-10-22",
+    date: "2026-10-23",
     title: "Where have we been?",
     excerpt: "A quick look at what's been going on behind the scenes.",
     cover: "images/devlogs/where-have-we-been.png",
