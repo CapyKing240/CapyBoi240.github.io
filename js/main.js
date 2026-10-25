@@ -81,8 +81,16 @@
   function phaseIcon(k, size = 18) {
     return `<svg class="phase" width="${size}" height="${size}" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#232b6e" stroke="rgba(170,186,255,.35)" stroke-width="1"/><path d="${phasePath(10, 10, 9, k)}" fill="#f1ebd5"/></svg>`;
   }
+  const LOGO_FILE = "images/header logo.png"; // your logo: used in the header and footer. Delete the file and the little moon comes back.
   function logoMark(size = 30) {
-    return `<svg width="${size}" height="${size}" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#232b6e"/><path d="${phasePath(10, 10, 9, 0.3)}" fill="#f1ebd5"/></svg>`;
+    const moonSvg = `<svg class="logo-fallback" width="${size}" height="${size}" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#232b6e"/><path d="${phasePath(10, 10, 9, 0.3)}" fill="#f1ebd5"/></svg>`;
+    return `<img class="logo-img" src="${esc(asset(LOGO_FILE))}" width="${size}" height="${size}" alt="" style="width:auto;height:${size}px;max-width:${size * 3}px;object-fit:contain" data-fallback="${esc(moonSvg)}">`;
+  }
+  function logoFallbacks() {
+    $$("img.logo-img").forEach((img) => {
+      const swap = () => { const t = document.createElement("template"); t.innerHTML = img.dataset.fallback; img.replaceWith(t.content.firstChild); };
+      if (img.complete && img.naturalWidth === 0) swap(); else img.addEventListener("error", swap, { once: true });
+    });
   }
 
   /* ---------- shared bits ---------- */
@@ -179,7 +187,7 @@
     const header = document.createElement("header");
     header.className = "site-header";
     header.innerHTML = `<div class="container header-inner">
-      <a class="brand" href="${href("")}">${logoMark(30)}<span>Moonlight Studios</span></a>
+      <a class="brand" href="${href("")}">${logoMark(60)}<span>Moonlight Studios</span></a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span></span></button>
       <nav class="site-nav" id="site-nav" aria-label="Main"><ul>${nav.map((n) => `<li><a href="${href(n[1])}"${n[0] === active ? ' aria-current="page"' : ""}>${n[2]}</a></li>`).join("")}</ul></nav>
     </div>`;
@@ -219,6 +227,7 @@
         <nav aria-label="Legal"><a href="${href("privacy_policy.html")}">Privacy policy</a><a href="${href("terms_of_service.html")}">Terms of service</a></nav></div>
     </div>`;
     document.body.append(footer);
+    logoFallbacks();
   }
 
   /* ---------- background: stars + waxing moon ---------- */
@@ -652,7 +661,7 @@
     const el = $("#about-stats");
     if (!el) return;
     const released = DATA_GAMES.filter((g) => g.statusKey === "released").length;
-    el.innerHTML = `<div><strong>${DATA_GAMES.length}</strong><span>games made</span></div><div><strong>${logs.length}</strong><span>devlogs written</span></div><div><strong>100%</strong><span>self-funded</span></div>`;
+    el.innerHTML = `<div><strong>${DATA_GAMES.length}</strong><span>games made</span></div><div><strong>${released}</strong><span>released</span></div><div><strong>${logs.length}</strong><span>devlogs written</span></div>`;
     const gl = $("#about-games");
     if (gl) gl.innerHTML = DATA_GAMES.map(posterCard).join("");
   }
