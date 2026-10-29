@@ -15,7 +15,7 @@ const SITE = {
   // Sent along with every message so replies go to the studio inbox.
   replyTo: "moonlight.studio2510@gmail.com",
   socials: {
-    itch: "https://moonlightstudios.itch.io", // TODO: check this is your itch.io profile
+    itch: "https://moonlight-studios-1.itch.io/", // TODO: check this is your itch.io profile
     youtube: "https://www.youtube.com/@moonlightstudios2510",
     discord: "",
     x: "https://x.com/Moonlight2510_"
